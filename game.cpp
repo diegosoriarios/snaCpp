@@ -76,6 +76,9 @@ int main()
                                     int y = rand() % 7;
                                     line[val[x]][val[y]] = 7;
                                     pontos++;
+                                }else if(line[i][j + 1] == 5){
+                                    printf("Jogo terminado!\nPontuação %i\n", pontos);
+                                    return 0;
                                 }
                                 line[i][j + 1] = 1;
                                 break;
@@ -95,6 +98,10 @@ int main()
                                     int y = rand() % 7;
                                     line[val[x]][val[y]] = 7;
                                     pontos++;
+                                }else if(line[i][j - 1] == 5){
+                                    system("clear");
+                                    printf("Jogo terminado!\nPontuação %i\n", pontos);
+                                    return 0;
                                 }
                                 line[i][j - 1] = 1;
                                 break;
@@ -114,6 +121,10 @@ int main()
                                     int y = rand() % 7;
                                     line[val[x]][val[y]] = 7;
                                     pontos++;
+                                }else if(line[i - 1][j] == 5){
+                                    system("clear");
+                                    printf("Jogo terminado!\nPontuação %i\n", pontos);
+                                    return 0;
                                 }
                                 line[i - 1][j] = 1;
                                 break;
@@ -132,6 +143,10 @@ int main()
                                     int y = rand() % 7;
                                     line[val[x]][val[y]] = 7;
                                     pontos++;
+                                }else if(line[i + 1][j] == 5){
+                                    system("clear");
+                                    printf("Jogo terminado!\nPontuação %i\n", pontos);
+                                    return 0;
                                 }
                                 line[i + 1][j] = 1;
                                 i = 10;
