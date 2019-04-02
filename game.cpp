@@ -36,6 +36,12 @@ int main()
     int x = rand() % 7;
     int y = rand() % 7;
     line[val[x]][val[y]] = 7;
+    int ix, iy;
+    do{
+        int ix = rand() % 7;
+        int iy = rand() % 7;
+        line[val[ix]][val[iy]] = 5;
+    }while(ix == x || iy == y);
 
     while ( 1 )
     {
@@ -150,6 +156,10 @@ int main()
                             }else{
                                 if(line[i][j] == 7){
                                     printf("*");
+                                }else {
+                                    if(line[i][j] == 5){
+                                        printf("@");
+                                    }
                                 }
                             }
                         }
